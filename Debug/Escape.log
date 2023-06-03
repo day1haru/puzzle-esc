@@ -1,0 +1,20 @@
+﻿  stgGame.c
+C:\Users\haru\Documents\Dev File\Escape\stgGame.c(15,8): warning C4013:  'gotoxy'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\haru\Documents\Dev File\Escape\stgGame.c(51,7): warning C4013:  'getch'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\haru\Documents\Dev File\Escape\stgGame.c(52,8): warning C4013:  'sboard'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\haru\Documents\Dev File\Escape\stgGame.c(92,8): warning C4013:  'stage0'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\haru\Documents\Dev File\Escape\stgGame.c(125,9): warning C4013:  'stage1'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\haru\Documents\Dev File\Escape\stgGame.c(154,9): warning C4013:  'main'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\haru\Documents\Dev File\Escape\stgGame.c(202,9): warning C4013:  'stage2'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\haru\Documents\Dev File\Escape\stgGame.c(276,9): warning C4013:  'stage3'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\haru\Documents\Dev File\Escape\stgGame.c(313,9): warning C4013:  'stage4'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\haru\Documents\Dev File\Escape\stgGame.c(354,22): warning C4013:  'time'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\haru\Documents\Dev File\Escape\stgGame.c(382,9): warning C4013:  'stage5'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\haru\Documents\Dev File\Escape\stgGame.c(460,12): warning C4013:  'stgresult'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\haru\Documents\Dev File\Escape\stgGame.c(466,9): warning C4477:  'scanf' : 서식 문자열 '%d'에 'int *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'double *'입니다.
+C:\Users\haru\Documents\Dev File\Escape\stgGame.c(466,9): warning C4477: C:\Users\haru\Documents\Dev File\Escape\stgGame.c(93) : warning C4716: 'sboard': 값을 반환해야 합니다.
+C:\Users\haru\Documents\Dev File\Escape\stgGame.c(466,9): warning C4477: C:\Users\haru\Documents\Dev File\Escape\stgGame.c(53) : warning C4716: 'loading': 값을 반환해야 합니다.
+C:\Users\haru\Documents\Dev File\Escape\stgGame.c(466,9): warning C4477: C:\Users\haru\Documents\Dev File\Escape\stgGame.c(240) : warning C4716: 'stage1': 값을 반환해야 합니다.
+C:\Users\haru\Documents\Dev File\Escape\stgGame.c(466,9): warning C4477: C:\Users\haru\Documents\Dev File\Escape\stgGame.c(284) : warning C4715: 'stage2': 모든 제어 경로에서 값을 반환하지는 않습니다.
+C:\Users\haru\Documents\Dev File\Escape\stgGame.c(466,9): warning C4477: C:\Users\haru\Documents\Dev File\Escape\stgGame.c(347) : warning C4715: 'stage3': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  Escape.vcxproj -> C:\Users\haru\Documents\Dev File\Escape\Debug\Escape.exe
