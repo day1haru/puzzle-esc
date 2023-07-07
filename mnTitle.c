@@ -1,35 +1,35 @@
-/* ¼±¾ðºÎ */
+/* ì„ ì–¸ë¶€ */
 #include "headEscape.h"
 #define UP 72
 #define DOWN 80
 #define SPACE 32
 
-/* ¼­ºêÇÔ¼ö Á¤ÀÇºÎ */
+/* ì„œë¸Œí•¨ìˆ˜ ì •ì˜ë¶€ */
 
-int cursor();			// Ä¿¼­ÀÌµ¿ÇÔ¼ö
-void screen_size();		// È­¸éÅ©±â¼³Á¤
-void draw_title();		// Å¸ÀÌÆ² ±×¸²
-int draw_menu();		// ¸ÞÀÎ¸Þ´º	
-void gotoxy(int, int);	// ÁÂÇ¥¼³Á¤
-void info_make();		// Á¦ÀÛ °³¿ä
-void animation_intro();	// ÀÎÆ®·Î ¾Ö´Ï¸ÞÀÌ¼Ç ¸¸µé±â
+int cursor();			// ì»¤ì„œì´ë™í•¨ìˆ˜
+void screen_size();		// í™”ë©´í¬ê¸°ì„¤ì •
+void draw_title();		// íƒ€ì´í‹€ ê·¸ë¦¼
+int draw_menu();		// ë©”ì¸ë©”ë‰´	
+void gotoxy(int, int);	// ì¢Œí‘œì„¤ì •
+void info_make();		// ì œìž‘ ê°œìš”
+void animation_intro();	// ì¸íŠ¸ë¡œ ì• ë‹ˆë©”ì´ì…˜ ë§Œë“¤ê¸°
 
-/* ½ºÅ×ÀÌÁö ÇÔ¼ö */
+/* ìŠ¤í…Œì´ì§€ í•¨ìˆ˜ */
 int loading();
 int sboard();
-int stage0();			// À½¼º ±âÈ£ ¿¬½À¹®Á¦.
-int stage1();			// ´Þ·ÂÀ» ÀÌ¿ëÇÑ ÁÂÇ¥¹®Á¦ LV2
-int stage2();			// ÆÐ·¯µ¶½º ¹®Á¦ LV5
-int stage3();			// Ä«ÀÌ»ç¸£ ¾ÏÈ£ ¹®Á¦ LV7
-int stage4();			// ¾Æ³ª±×·¥ ¹®Á¦ LV6
-int stage5();			// ÃÖÁ¾¹®Á¦ LV 10
+int stage0();			// ìŒì„± ê¸°í˜¸ ì—°ìŠµë¬¸ì œ.
+int stage1();			// ë‹¬ë ¥ì„ ì´ìš©í•œ ì¢Œí‘œë¬¸ì œ LV2
+int stage2();			// íŒ¨ëŸ¬ë…ìŠ¤ ë¬¸ì œ LV5
+int stage3();			// ì¹´ì´ì‚¬ë¥´ ì•”í˜¸ ë¬¸ì œ LV7
+int stage4();			// ì•„ë‚˜ê·¸ëž¨ ë¬¸ì œ LV6
+int stage5();			// ìµœì¢…ë¬¸ì œ LV 10
 int stgresult();		// 
 
-/* ¸ÞÀÎÇÔ¼ö */
+/* ë©”ì¸í•¨ìˆ˜ */
 int main(void)
 {
 	screen_size();
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7); // ÇÏ¾ç
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7); // í•˜ì–‘
 	while (1)
 	{
 		draw_title();
@@ -37,16 +37,16 @@ int main(void)
 		if (num_menu == 0)
 
 		{
-			animation_intro();	// °ÔÀÓ½ÃÀÛ
-			break;				// ·çÇÁÅ»Ãâ
+			animation_intro();	// ê²Œìž„ì‹œìž‘
+			break;				// ë£¨í”„íƒˆì¶œ
 		}
 		else if (num_menu == 1)
 		{
-			info_make();		// Á¦ÀÛÀÚ
+			info_make();		// ì œìž‘ìž
 		}
 		else if (num_menu == 2)
 		{
-			return 0;			// Á¾·á
+			return 0;			// ì¢…ë£Œ
 		}
 		system("cls");
 	}
@@ -54,7 +54,7 @@ int main(void)
 	return 0;
 }
 
-/* ¼­ºêÇÔ¼ö */
+/* ì„œë¸Œí•¨ìˆ˜ */
 int cursor()
 {
 	int code = getch();
@@ -75,12 +75,12 @@ int cursor()
 
 void screen_size()
 {
-	system("mode con cols=95 lines=30 | title ÀÌ½ºÄÉÀÌÇÁ!");
+	system("mode con cols=95 lines=30 | title ì´ìŠ¤ì¼€ì´í”„!");
 }
 
 void draw_title()
 {
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7); // ÇÏ¾ç
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7); // í•˜ì–‘
 	printf(" \n\n");
 	printf("  #########    #########    #########     ########     ########     #########   ### \n");
 	printf("  ###          ###          ###          ###     ###   ###    ###   ###          ### \n");
@@ -90,7 +90,7 @@ void draw_title()
 	printf("      ###                 ###   ###          ###     ###   ###          ###          ### \n");
 	printf("        #########   #########     #########   ###     ###   ###           #########   ### \n");
 	printf(" \n");
-	printf("                                ¡è,¡é : Ä¿¼­ÀÌµ¿     Space : ¼±ÅÃ                           \n\n");	
+	printf("                                â†‘,â†“ : ì»¤ì„œì´ë™     Space : ì„ íƒ                           \n\n");	
 }
 
 void gotoxy(int x, int y)
@@ -107,11 +107,11 @@ int draw_menu()
 	int x = 40;
 	int y = 13;
 	gotoxy(x - 2, y);
-	printf("> °Ô ÀÓ ½Ã ÀÛ");
+	printf("> ê²Œ ìž„ ì‹œ ìž‘");
 	gotoxy(x, y + 1);
-	printf("Á¦ ÀÛ ÀÚ");
+	printf("ì œ ìž‘ ìž");
 	gotoxy(x, y + 2);
-	printf("°Ô ÀÓ Á¾ ·á");
+	printf("ê²Œ ìž„ ì¢… ë£Œ");
 	
 	while (1)
 	{
@@ -153,20 +153,18 @@ int draw_menu()
 void info_make()
 {
 	system("cls");
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15); // ±ÛÀÚ»ö ÇÏ¾á»ö
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15); // ê¸€ìžìƒ‰ í•˜ì–€ìƒ‰
 	printf("\n");
-	printf(" ¦£¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¤ \n");
-	printf(" ¦¢                                    Á¦ÀÛ °³¿ä                                 ¦¢ \n");
-	printf(" ¦¢¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¢ \n");
-	printf(" ¦¢ Á¦ÀÛ. ÀÌµ¿ÈÆ                                                                 ¦¢ \n");
-	printf(" ¦¢ ¼Ò¼Ó. ¹é¼®´ëÇÐ±³ ICTÇÐºÎ Á¤º¸º¸È£Àü°ø                                        ¦¢ \n");
-	printf(" ¦¢ ÇÐ¹ø. 19ÇÐ¹ø                                                                 ¦¢ \n");
-	printf(" ¦¢ ÇÐ±â. 1ÇÐ³â 1ÇÐ±â                                                            ¦¢ \n");
-	printf(" ¦¢ Á¦ÀÛÀÏ. 2019³â 6¿ù                                                           ¦¢ \n");
-	printf(" ¦¢ °­ÀÇ¸í. C¾ð¾î ÇÁ·Î±×·¡¹Ö                                                     ¦¢ \n");
-	printf(" ¦¢ ÇÑ¸¶µð. Á¾.°­.ÁÁ.¾Æ!                                                         ¦¢ \n");
-	printf(" ¦¦¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¥ \n\n\n");
-	printf("                     ½ºÆäÀÌ½º¹Ù ÀÔ·Â ½Ã ¸ÞÀÎÈ­¸éÀ¸·Î º¹±ÍÇÕ´Ï´Ù.");
+	printf(" â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â” \n");
+	printf(" â”‚                                    ì œìž‘ ê°œìš”                                  â”‚ \n");
+	printf(" â”‚â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”‚ \n");
+	printf(" â”‚ ì œìž‘. ì´ë™í›ˆ                                                                  â”‚ \n");
+	printf(" â”‚ ì†Œì†. ê°œì¸ì •ë³´ ì‚­ì œ                                                           â”‚ \n");
+	printf(" â”‚ í•™ë²ˆ. ê°œì¸ì •ë³´ ì‚­ì œ                                                           â”‚ \n");
+	printf(" â”‚ í•™ê¸°. ê°œì¸ì •ë³´ ì‚­ì œ                                                           â”‚ \n");
+	printf(" â”‚ ì œìž‘ì¼. ê°œì¸ì •ë³´ ì‚­ì œ                                                         â”‚ \n");
+	printf(" â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜ \n\n\n");
+	printf("                     ìŠ¤íŽ˜ì´ìŠ¤ë°” ìž…ë ¥ ì‹œ ë©”ì¸í™”ë©´ìœ¼ë¡œ ë³µê·€í•©ë‹ˆë‹¤.");
 	
 
 	while (1)
